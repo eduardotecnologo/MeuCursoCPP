@@ -1,0 +1,12 @@
+#include <iostream>
+
+// Vamos criar uma aplicação console
+int main() { // 2. O ponto de entrada obrigatório de todo programa C++
+
+	std::cout << "C++ e a base de tudo!" << std::endl; // 3. Saída de texto
+
+	system("pause"); // Pausa o console
+	return 0; // 4. Indica ao Sistema Operacional que o programa terminou com sucesso
+
+
+}
