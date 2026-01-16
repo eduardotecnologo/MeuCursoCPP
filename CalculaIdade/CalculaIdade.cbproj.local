@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2026/01/16 19:31:43.342,=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\Project2PCH1.h</Transaction>
+    <Transaction>2026/01/16 19:31:43.950,=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\File1.cpp</Transaction>
+    <Transaction>2026/01/16 19:33:42.854,C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\CalculaIdade\CalculaIdadePCH1.h=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\Project2PCH1.h</Transaction>
+    <Transaction>2026/01/16 19:33:42.945,C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\CalculaIdade\File1.cpp=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\File1.cpp</Transaction>
+    <Transaction>2026/01/16 19:33:42.997,C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\CalculaIdade\CalculaIdade.cbproj=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\Project2.cbproj</Transaction>
+    <Transaction>2026/01/16 19:33:53.076,C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\CalculaIdade\main.cpp=C:\Users\EduDevWin\Documents\GIT\EspecialistaC-\MeuCursoCPP\CalculaIdade\File1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
