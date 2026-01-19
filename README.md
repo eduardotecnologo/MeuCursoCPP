@@ -208,6 +208,229 @@ int main() {
     return 0;
 }
 ```
+#### 2.3 Interagindo com o Usuário (std::cin)
+
+Até agora, escrevemos os valores direto no código. Mas um programa de verdade pergunta as coisas para o usuário. Para isso, usamos o **`std::cin`** (C-Input).
+
+**Pense assim:**
+
+- **`std::cout`** → O computador fala
+- **`std::cin`** → O computador ouve
+
+##### Exemplo de Diálogo
+
+```cpp
+#include <iostream>
+
+int main() {
+    int numero_favorito;
+
+    std::cout << "Qual o seu numero favorito? ";
+    std::cin >> numero_favorito; // O programa para e espera você digitar
+
+    std::cout << "Que legal! O meu tambem e " << numero_favorito << std::endl;
+
+    return 0;
+}
+```
+
+##### O que é o std::cin?
+
+Se `std::cout` é a "boca" do programa (ele fala), o `std::cin` é o ouvido — escuta o que o usuário digita no teclado.
+
+**Em outras palavras:**
+
+- `cout` = **saída**
+- `cin` = **entrada**
+
+Simples, mas poderoso.
+
+##### Exemplo básico
+
+```cpp
+int idade;
+
+std::cout << "Digite sua idade: ";
+std::cin >> idade;
+
+std::cout << "Voce tem " << idade << " anos!";
+```
+
+Nesse momento, o programa para tudo, espera o usuário digitar algo, e só continua quando recebe a entrada. Esse comportamento é essencial para praticamente qualquer aplicação interativa.
+
+##### Por que isso é importante para quem está começando?
+
+Porque ao dominar `std::cin`, você desbloqueia:
+
+- Programas que fazem perguntas
+- Sistemas que recebem decisões do usuário
+- Calculadoras
+- Formulários
+- Menus interativos
+- Jogos no terminal
+
+É aqui que o seu código deixa de ser apenas "um texto que aparece na tela" e se transforma em um **programa de verdade**.
+
+##### Dica para iniciantes
+
+Sempre pense em `cout` e `cin` como um diálogo:
+
+- **Pergunto** → `cout`
+- **Espero a resposta** → `cin`
+- **Uso a resposta** → lógica do programa
+
+Simples assim.
+
+##### Exercício de Fixação – "Seu Primeiro Cadastro Simples"
+
+Crie um programa em C++ que:
+
+1. **Pergunte ao usuário:**
+   - Seu nome
+   - Sua idade
+   - Sua cidade
+   - Seu hobby favorito
+
+2. **Armazene** essas informações em variáveis.
+
+3. **Ao final**, exiba uma mensagem no estilo:
+   ```
+   Olá, [nome]!
+   Você tem [idade] anos, mora em [cidade]
+   e gosta de [hobby]. Continue estudando C++!
+   ```
+
+**Regras:**
+
+- Use `std::cin` para receber dados
+- Use `std::cout` para mostrar a mensagem final
+- Utilize os tipos corretos para cada informação:
+  - `nome` → `std::string`
+  - `idade` → `int`
+  - `cidade` → `std::string`
+  - `hobby` → `std::string`
+
+**Dica extra para alunos curiosos:**
+
+Se quiser deixar mais avançado, aprenda a usar `std::getline(std::cin, variavel)` para capturar textos com espaços.
+
+**Objetivo do exercício:**
+
+Fixar:
+- Entrada e saída (`cin`/`cout`)
+- Declaração de variáveis
+- Manipulação de texto e números
+- Interação básica com o usuário
+
+##### Desafio Super Simples (O seu primeiro "App")
+
+Crie um programa que:
+
+1. Pergunte o nome do usuário
+2. Pergunte o ano de nascimento
+3. Pergunte o ano atual
+4. Calcule a idade (Ano Atual - Ano de Nascimento) e mostre na tela: **"Fulano, você tem X anos."**
+
+---
+## 💻 Tecnologias
+
+#include <iostream>
+
+int main() {
+    int numero_favorito;
+
+    std::cout << "Qual o seu numero favorito? ";
+    std::cin >> numero_favorito; // O programa para e espera voce digitar
+
+    std::cout << "Que legal! O meu tambem e " << numero_favorito << std::endl;
+
+    return 0;
+}
+🛠️ Desafio Super Simples (O seu primeiro "App")
+Crie um programa que:
+
+Pergunte o nome do usuário.
+Pergunte o ano de nascimento.
+Pergunte o ano atual.
+Calcule a idade (Ano Atual - Ano de Nascimento) e mostre na tela: "Fulano, você tem X anos."
+
+🧠 O que é o std::cin?
+Se std::cout é a “boca” do programa (ele fala),
+o std::cin é o ouvido — ele escuta o que o usuário digita no teclado.
+
+Em outras palavras:
+
+cout = saída
+cin = entrada
+Simples, mas poderoso.
+
+💻 Exemplo básico:
+
+int idade;
+
+std::cout << "Digite sua idade: ";
+std::cin >> idade;
+
+std::cout << "Voce tem " << idade << " anos!";
+Nesse momento, o programa para tudo, espera o usuário digitar algo,
+e só continua quando recebe a entrada.
+Esse comportamento é essencial para praticamente qualquer aplicação interativa.
+
+🔍 Por que isso é importante para quem está começando?
+Porque ao dominar std::cin, você desbloqueia:
+
+programas que fazem perguntas
+sistemas que recebem decisões do usuário
+calculadoras
+formulários
+menus interativos
+jogos no terminal
+É aqui que o seu código deixa de ser apenas “um texto que aparece na tela”
+e se transforma em um programa de verdade.
+
+🚀 Dica para iniciantes
+Sempre pense em cout e cin como um diálogo:
+
+Pergunto → cout
+Espero a resposta → cin
+Uso a resposta → lógica do programa
+Simples assim.
+
+📝 Exercício de Fixação – “Seu Primeiro Cadastro Simples”
+Crie um programa em C++ que:
+
+1. Pergunte ao usuário:
+Seu nome
+Sua idade
+Sua cidade
+Seu hobby favorito
+2. Armazene essas informações em variáveis.
+3. Ao final, exiba uma mensagem no estilo:
+Olá, [nome]!
+Você tem [idade] anos, mora em [cidade]
+e gosta de [hobby]. Continue estudando C++!
+
+Regras:
+Use std::cin para receber dados.
+Use std::cout para mostrar a mensagem final.
+Utilize os tipos corretos para cada informação:
+nome → std::string
+idade → int
+cidade → std::string
+hobby → std::string
+
+💡 Dica extra para alunos curiosos:
+Se quiser deixar mais avançado, aprenda a usar
+std::getline(std::cin, variavel)
+para capturar textos com espaços.
+
+📌 Objetivo do exercício:
+Fixar:
+
+Entrada e saída (cin/cout)
+Declaração de variáveis
+Manipulação de texto e números
+Interação básica com o usuário
 
 ---
 
@@ -272,36 +495,6 @@ int main() {
 
     return 0;
 }
-📖 Capítulo 2.3: Interagindo com o Usuário (std::cin)
-Até agora, nós escrevemos os valores direto no código. Mas um programa de verdade pergunta as coisas para o usuário. Para isso, usamos o std::cin (C-Input).
-
-Pense assim:
-
-std::cout -> O computador fala.
-std::cin -> O computador ouve.
-Exemplo de Diálogo:
-
-cpp
-Copy
-#include <iostream>
-
-int main() {
-    int numero_favorito;
-
-    std::cout << "Qual o seu numero favorito? ";
-    std::cin >> numero_favorito; // O programa para e espera voce digitar
-
-    std::cout << "Que legal! O meu tambem e " << numero_favorito << std::endl;
-
-    return 0;
-}
-🛠️ Desafio Super Simples (O seu primeiro "App")
-Crie um programa que:
-
-Pergunte o nome do usuário.
-Pergunte o ano de nascimento.
-Pergunte o ano atual.
-Calcule a idade (Ano Atual - Ano de Nascimento) e mostre na tela: "Fulano, você tem X anos."
 
 ## 📁 Estrutura do Projeto
 

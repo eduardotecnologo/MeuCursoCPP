@@ -1,0 +1,51 @@
+# Arquivos de compilação
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Arquivos IDE - Borland C++
+*.cbproj
+*.cbproj.local
+*.res
+*.tds
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.pch
+
+# Histórico de versões
+__history/
+__recovery/
+
+# Build directories
+Win32/
+x64/
+Debug/
+Release/
+bin/
+obj/
+
+# Arquivos temporários
+*.tmp
+*.bak
+*~
+*.swp
+*.swo
+
+# Arquivos do VS Code
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Arquivo de log
+*.log
