@@ -430,24 +430,50 @@ switch (opcao) {
         break;
 }
 ```
-📝 Exercício de Fixação: O Desafio do "Segurança Digital"
-Cenário: Você foi contratado para desenvolver o módulo de acesso de um sistema de alta segurança. O sistema não depende apenas de uma senha, mas de uma combinação de fatores para autorizar a entrada.
+📝 **Exercício de Fixação: O Desafio do "Segurança Digital"**
 
-Objetivo: Escreva um programa em C++ que leia três informações do usuário e decida se o acesso será CONCEDIDO ou NEGADO.
+---
 
-As Regras de Acesso:
-Para o acesso ser CONCEDIDO, o usuário precisa atender a UMA das duas condições abaixo:
+### 📌 Cenário
+Você foi contratado para desenvolver o módulo de acesso de um sistema de **alta segurança**.  
+O sistema não depende apenas de uma senha, mas de uma **combinação de fatores** para autorizar a entrada.
 
-Condição A: Ter a senha secreta (defina uma senha numérica, ex: 1234) E ter mais de 18 anos.
-Condição B: Ser um "Usuário VIP" (o usuário deve digitar 1 para Sim ou 0 para Não). VIPs têm acesso garantido independente da idade, desde que acertem a senha.
-O que seu programa deve fazer:
-Pedir ao usuário para digitar a Senha (inteiro).
-Pedir ao usuário para digitar a Idade (inteiro).
-Pedir ao usuário para informar se é VIP (digitar 1 para Sim, 0 para Não).
-Usar a estrutura if com operadores lógicos (&& e ||) para avaliar as regras.
-Exibir na tela: "ACESSO CONCEDIDO" ou "ACESSO NEGADO"!
-💡 Dica de Especialista para os leitores:
-"Tente resolver este exercício usando apenas UM ÚNICO if bem estruturado com parênteses e operadores lógicos. Isso vai treinar sua capacidade de criar condições complexas e limpas!"
+---
+
+### 🎯 Objetivo
+Escreva um programa em **C++** que leia **três informações** do usuário e decida se o acesso será **CONCEDIDO** ou **NEGADO**.
+
+---
+
+### 🔐 Regras de Acesso
+Para o acesso ser **CONCEDIDO**, o usuário precisa atender a **UMA** das duas condições abaixo:
+
+- **Condição A**  
+  - Ter a **senha secreta** (defina uma senha numérica, por exemplo: `1234`)  
+  - **E** ter **mais de 18 anos**
+
+- **Condição B**  
+  - Ser um **Usuário VIP**  
+    - O usuário deve digitar `1` para **Sim** ou `0` para **Não**  
+  - VIPs têm acesso garantido **independente da idade**, **desde que acertem a senha**
+
+---
+
+### 🧠 O que seu programa deve fazer
+- Pedir ao usuário para digitar a **Senha** (`int`)
+- Pedir ao usuário para digitar a **Idade** (`int`)
+- Pedir ao usuário para informar se é **VIP** (`1` para Sim, `0` para Não)
+- Usar a estrutura `if` com **operadores lógicos** (`&&` e `||`) para avaliar as regras
+- Exibir na tela:
+  - **"ACESSO CONCEDIDO"**  
+  - ou **"ACESSO NEGADO"**
+
+---
+
+### 💡 Dica de Especialista
+> *"Tente resolver este exercício usando apenas **UM ÚNICO `if`** bem estruturado com parênteses e operadores lógicos.  
+> Isso vai treinar sua capacidade de criar condições complexas e limpas!"*
+
 ---
 
 ## 💻 Tecnologias
