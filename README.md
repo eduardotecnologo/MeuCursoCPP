@@ -14,9 +14,13 @@ Um curso completo e prático de C++ moderno, focado em fundamentos sólidos e co
 - [Pré-requisitos](#pré-requisitos)
 - [Como Usar](#como-usar)
 - [Capítulos](#capítulos)
+  - [Capítulo 1: A Anatomia do C++](#capítulo-1-a-anatomia-do-c)
+  - [Capítulo 2: O Fluxo da Lógica](#capítulo-2-o-fluxo-da-lógica)
 - [Tecnologias](#tecnologias)
 - [Contribuindo](#contribuindo)
 - [Licença](#licença)
+- [Autor](#autor)
+- [Recursos Adicionais](#recursos-adicionais)
 
 ---
 
@@ -47,13 +51,12 @@ MeuCursoCPP/
 ├── README.md                    # Este arquivo
 ├── CapituloOne.cpp             # Exemplos do Capítulo 1
 ├── CapituloOne.h               # Header do Capítulo 1
-├── Project1.cbproj             # Arquivo de projeto Borland C++
 ├── CalculaIdade/               # Projeto prático: Calculadora de Idade
 │   ├── main.cpp                # Código principal
 │   └── CalculaIdade.cbproj
+├── Project1.cbproj             # Arquivo de projeto Borland C++
 ├── Win32/                       # Arquivos compilados (Debug)
 └── __history/                   # Histórico de versões
-
 ```
 
 ---
@@ -69,6 +72,7 @@ Antes de começar, você precisará ter instalado:
 ### Instalação em Diferentes Sistemas
 
 #### Windows
+
 ```bash
 # Usando MinGW (GCC)
 # Faça download em: https://www.mingw-w64.org/
@@ -78,6 +82,7 @@ Antes de começar, você precisará ter instalado:
 ```
 
 #### Linux
+
 ```bash
 # Ubuntu/Debian
 sudo apt-get install build-essential
@@ -87,6 +92,7 @@ sudo dnf install gcc gcc-c++ make
 ```
 
 #### macOS
+
 ```bash
 # Xcode Command Line Tools
 xcode-select --install
@@ -94,7 +100,7 @@ xcode-select --install
 
 ---
 
-## � Como Usar
+## 💻 Como Usar
 
 ### Compilar e Executar um Projeto
 
@@ -208,7 +214,8 @@ int main() {
     return 0;
 }
 ```
-#### 2.3 Interagindo com o Usuário (std::cin)
+
+#### 2.4 Interagindo com o Usuário (std::cin)
 
 Até agora, escrevemos os valores direto no código. Mas um programa de verdade pergunta as coisas para o usuário. Para isso, usamos o **`std::cin`** (C-Input).
 
@@ -245,7 +252,7 @@ Se `std::cout` é a "boca" do programa (ele fala), o `std::cin` é o ouvido — 
 
 Simples, mas poderoso.
 
-##### Exemplo básico
+##### Exemplo Básico
 
 ```cpp
 int idade;
@@ -271,7 +278,7 @@ Porque ao dominar `std::cin`, você desbloqueia:
 
 É aqui que o seu código deixa de ser apenas "um texto que aparece na tela" e se transforma em um **programa de verdade**.
 
-##### Dica para iniciantes
+##### Dica para Iniciantes
 
 Sempre pense em `cout` e `cin` como um diálogo:
 
@@ -281,7 +288,7 @@ Sempre pense em `cout` e `cin` como um diálogo:
 
 Simples assim.
 
-##### Exercício de Fixação – "Seu Primeiro Cadastro Simples"
+#### 2.5 Exercício de Fixação – "Seu Primeiro Cadastro Simples"
 
 Crie um programa em C++ que:
 
@@ -322,7 +329,7 @@ Fixar:
 - Manipulação de texto e números
 - Interação básica com o usuário
 
-##### Desafio Super Simples (O seu primeiro "App")
+#### 2.6 Desafio Super Simples – "O seu primeiro App"
 
 Crie um programa que:
 
@@ -331,107 +338,116 @@ Crie um programa que:
 3. Pergunte o ano atual
 4. Calcule a idade (Ano Atual - Ano de Nascimento) e mostre na tela: **"Fulano, você tem X anos."**
 
----
-## 💻 Tecnologias
+#### 2.7 O Poder da Decisão (if, else e a Lógica Booleana)
 
-#include <iostream>
+Até agora, nossos programas eram "trilhos de trem": eles seguiam uma linha reta do início ao fim, executando comando por comando sem questionar nada. Mas o software de verdade precisa decidir!
 
-int main() {
-    int numero_favorito;
+Neste capítulo, vamos ensinar seu programa a pensar e escolher caminhos diferentes com base nos dados que ele recebe!
 
-    std::cout << "Qual o seu numero favorito? ";
-    std::cin >> numero_favorito; // O programa para e espera voce digitar
+##### A Estrutura if (Se...)
 
-    std::cout << "Que legal! O meu tambem e " << numero_favorito << std::endl;
+O if é a ferramenta mais básica de decisão. Ele avalia uma condição: se ela for verdadeira, o código dentro das chaves {} é executado!
 
-    return 0;
-}
-🛠️ Desafio Super Simples (O seu primeiro "App")
-Crie um programa que:
-
-Pergunte o nome do usuário.
-Pergunte o ano de nascimento.
-Pergunte o ano atual.
-Calcule a idade (Ano Atual - Ano de Nascimento) e mostre na tela: "Fulano, você tem X anos."
-
-🧠 O que é o std::cin?
-Se std::cout é a “boca” do programa (ele fala),
-o std::cin é o ouvido — ele escuta o que o usuário digita no teclado.
-
-Em outras palavras:
-
-cout = saída
-cin = entrada
-Simples, mas poderoso.
-
-💻 Exemplo básico:
-
+```cpp
 int idade;
 
 std::cout << "Digite sua idade: ";
 std::cin >> idade;
 
-std::cout << "Voce tem " << idade << " anos!";
-Nesse momento, o programa para tudo, espera o usuário digitar algo,
-e só continua quando recebe a entrada.
-Esse comportamento é essencial para praticamente qualquer aplicação interativa.
+if (idade >= 18) {
+    std::cout << "Voce e maior de idade. Acesso liberado!" << std::endl;
+}
+```
 
-🔍 Por que isso é importante para quem está começando?
-Porque ao dominar std::cin, você desbloqueia:
+##### O Caminho Alternativo: else (Senão...)
 
-programas que fazem perguntas
-sistemas que recebem decisões do usuário
-calculadoras
-formulários
-menus interativos
-jogos no terminal
-É aqui que o seu código deixa de ser apenas “um texto que aparece na tela”
-e se transforma em um programa de verdade.
+E se a condição for falsa? O else define o que deve acontecer caso o if não seja atendido!
 
-🚀 Dica para iniciantes
-Sempre pense em cout e cin como um diálogo:
+```cpp
+if (idade >= 18) {
+    std::cout << "Acesso liberado!";
+} else {
+    std::cout << "Acesso negado. Voce precisa ter 18 anos.";
+}
+```
 
-Pergunto → cout
-Espero a resposta → cin
-Uso a resposta → lógica do programa
-Simples assim.
+##### Múltiplas Escolhas: else if
 
-📝 Exercício de Fixação – “Seu Primeiro Cadastro Simples”
-Crie um programa em C++ que:
+Às vezes, a vida não é apenas "sim" ou "não". Para verificar várias condições em sequência, usamos o else if. O programa testa a primeira; se falhar, testa a segunda, e assim por diante!
 
-1. Pergunte ao usuário:
-Seu nome
-Sua idade
-Sua cidade
-Seu hobby favorito
-2. Armazene essas informações em variáveis.
-3. Ao final, exiba uma mensagem no estilo:
-Olá, [nome]!
-Você tem [idade] anos, mora em [cidade]
-e gosta de [hobby]. Continue estudando C++!
+```cpp
+double nota;
 
-Regras:
-Use std::cin para receber dados.
-Use std::cout para mostrar a mensagem final.
-Utilize os tipos corretos para cada informação:
-nome → std::string
-idade → int
-cidade → std::string
-hobby → std::string
+std::cout << "Digite a nota do aluno (0 a 10): ";
+std::cin >> nota;
 
-💡 Dica extra para alunos curiosos:
-Se quiser deixar mais avançado, aprenda a usar
-std::getline(std::cin, variavel)
-para capturar textos com espaços.
+if (nota >= 9.0) {
+    std::cout << "Excelente! Aprovado manolo!";
+} else if (nota >= 7.0) {
+    std::cout << "Aprovado!";
+} else if (nota >= 5.0) {
+    std::cout << "Recuperacao!";
+} else {
+    std::cout << "Reprovado!";
+}
+```
 
-📌 Objetivo do exercício:
-Fixar:
+##### Operadores Lógicos: Combinando Decisões!
 
-Entrada e saída (cin/cout)
-Declaração de variáveis
-Manipulação de texto e números
-Interação básica com o usuário
+Para criar condições mais complexas, usamos os operadores lógicos. Eles são o "tempero" da lógica de programação!
 
+- **`&&` (E / AND)**: Só é verdadeiro se ambas as condições forem verdadeiras.
+  - Ex: `if (idade >= 18 && tem_carteira == true)`
+
+- **`||` (OU / OR)**: É verdadeiro se pelo menos uma das condições for verdadeira.
+  - Ex: `if (dia == "sabado" || dia == "domingo")`
+
+- **`!` (NÃO / NOT)**: Inverte o valor. O que é verdadeiro vira falso e vice-versa.
+  - Ex: `if (!esta_chovendo)`
+
+##### O Atalho: switch
+
+Quando você tem muitas opções baseadas em um único valor inteiro ou caractere (como um menu), o switch é muito mais limpo que vários if/else.
+
+```cpp
+int opcao;
+
+std::cout << "1- Iniciar | 2- Configurar | 3- Sair\nEscolha: ";
+std::cin >> opcao;
+
+switch (opcao) {
+    case 1:
+        std::cout << "Iniciando jogo...";
+        break; // O 'break' e obrigatorio para nao executar os de baixo!
+    case 2:
+        std::cout << "Abrindo configuracoes...";
+        break;
+    case 3:
+        std::cout << "Saindo...";
+        break;
+    default:
+        std::cout << "Opcao invalida!";
+        break;
+}
+```
+📝 Exercício de Fixação: O Desafio do "Segurança Digital"
+Cenário: Você foi contratado para desenvolver o módulo de acesso de um sistema de alta segurança. O sistema não depende apenas de uma senha, mas de uma combinação de fatores para autorizar a entrada.
+
+Objetivo: Escreva um programa em C++ que leia três informações do usuário e decida se o acesso será CONCEDIDO ou NEGADO.
+
+As Regras de Acesso:
+Para o acesso ser CONCEDIDO, o usuário precisa atender a UMA das duas condições abaixo:
+
+Condição A: Ter a senha secreta (defina uma senha numérica, ex: 1234) E ter mais de 18 anos.
+Condição B: Ser um "Usuário VIP" (o usuário deve digitar 1 para Sim ou 0 para Não). VIPs têm acesso garantido independente da idade, desde que acertem a senha.
+O que seu programa deve fazer:
+Pedir ao usuário para digitar a Senha (inteiro).
+Pedir ao usuário para digitar a Idade (inteiro).
+Pedir ao usuário para informar se é VIP (digitar 1 para Sim, 0 para Não).
+Usar a estrutura if com operadores lógicos (&& e ||) para avaliar as regras.
+Exibir na tela: "ACESSO CONCEDIDO" ou "ACESSO NEGADO"!
+💡 Dica de Especialista para os leitores:
+"Tente resolver este exercício usando apenas UM ÚNICO if bem estruturado com parênteses e operadores lógicos. Isso vai treinar sua capacidade de criar condições complexas e limpas!"
 ---
 
 ## 💻 Tecnologias
@@ -478,51 +494,6 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 ---
 
-**Última atualização**: Janeiro de 2026
-
-int main() {
-    // Criando as variáveis
-    std::string nome = "Eduardo";
-    int anos = 20;
-    int dias_no_ano = 365;
-
-    // Fazendo a conta
-    int total_dias = anos * dias_no_ano;
-
-    // Mostrando o resultado
-    std::cout << "Ola, " << nome << "!" << std::endl;
-    std::cout << "Voce tem aproximadamente " << total_dias << " dias de vida." << std::endl;
-
-    return 0;
-}
-
-## 📁 Estrutura do Projeto
-
-```
-MeuCursoCPP/
-├── CapituloOne.cpp       # Código do Capítulo 1
-├── CapituloOne.h         # Header do Capítulo 1
-├── Project1.cbproj       # Arquivo do projeto
-├── README.md             # Este arquivo
-└── __history/            # Histórico de versões
-```
-
----
-
-## 🎓 Como Usar Este Repositório
-
-1. Clone o repositório
-2. Abra o projeto em sua IDE preferida (Visual Studio, VS Code, CLion, etc.)
-3. Navegue pelos capítulos na ordem indicada
-4. Complete os exercícios práticos de cada capítulo
-5. Compile e teste sua implementação
-
----
-
-## 📝 Licença
-
-Conteúdo educacional - Todos os direitos reservados
-
----
+**Última atualização**: Fevereiro de 2026
 
 **Bom aprendizado! 🚀 C++ aguarda por você.**
