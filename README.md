@@ -565,7 +565,7 @@ O desafio é criar um **Analisador de Estatísticas Numéricas**. É o tipo de l
 
 ---
 
-### 🧠 Reflexão do Capítulo 2.5
+### 🧠 Reflexão do Capítulo 2.8
 
 Agora seu programa pode processar **milhares de informações em milissegundos**. Mas note algo importante: todas as variáveis que usamos até agora guardam apenas **um valor por vez**.
 
