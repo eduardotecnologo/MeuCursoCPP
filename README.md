@@ -32,15 +32,15 @@ Este repositório contém exemplos práticos e exercícios do curso **"C++: A Ba
 
 ## 📚 Sumário do Curso
 
-| Capítulo | Tema | Conceitos |
-|----------|------|----------|
-| 1 | A Anatomia do C++ e o Primeiro Contato | Onde estamos e como o código vira software |
-| 2 | O Fluxo da Lógica | Variáveis, Tipos e Controle |
-| 3 | A Memória Desvendada | Ponteiros, Referências e o Stack vs Heap |
-| 4 | Engenharia de Objetos | POO Moderna e RAII |
-| 5 | A Biblioteca Padrão (STL) | Containers e Algoritmos de Alta Performance |
-| 6 | O Poder dos Templates | Programação Genérica |
-| 7 | Concorrência e Performance | Multithreading e Otimização de Baixo Nível |
+| Capítulo | Tema                                   | Conceitos                                   |
+| -------- | -------------------------------------- | ------------------------------------------- |
+| 1        | A Anatomia do C++ e o Primeiro Contato | Onde estamos e como o código vira software  |
+| 2        | O Fluxo da Lógica                      | Variáveis, Tipos e Controle                 |
+| 3        | A Memória Desvendada                   | Ponteiros, Referências e o Stack vs Heap    |
+| 4        | Engenharia de Objetos                  | POO Moderna e RAII                          |
+| 5        | A Biblioteca Padrão (STL)              | Containers e Algoritmos de Alta Performance |
+| 6        | O Poder dos Templates                  | Programação Genérica                        |
+| 7        | Concorrência e Performance             | Multithreading e Otimização de Baixo Nível  |
 
 ---
 
@@ -205,12 +205,12 @@ int main() {
     std::string nome = "Manolo";
     int anos = 20;
     int dias_no_ano = 365;
-    
+
     int total_dias = anos * dias_no_ano;
-    
+
     std::cout << "Ola, " << nome << "!" << std::endl;
     std::cout << "Voce tem aproximadamente " << total_dias << " dias de vida." << std::endl;
-    
+
     return 0;
 }
 ```
@@ -324,6 +324,7 @@ Se quiser deixar mais avançado, aprenda a usar `std::getline(std::cin, variavel
 **Objetivo do exercício:**
 
 Fixar:
+
 - Entrada e saída (`cin`/`cout`)
 - Declaração de variáveis
 - Manipulação de texto e números
@@ -430,49 +431,139 @@ switch (opcao) {
         break;
 }
 ```
+
 📝 **Exercício de Fixação: O Desafio do "Segurança Digital"**
 
 ---
 
 ### 📌 Cenário
+
 Você foi contratado para desenvolver o módulo de acesso de um sistema de **alta segurança**.  
 O sistema não depende apenas de uma senha, mas de uma **combinação de fatores** para autorizar a entrada.
 
 ---
 
 ### 🎯 Objetivo
+
 Escreva um programa em **C++** que leia **três informações** do usuário e decida se o acesso será **CONCEDIDO** ou **NEGADO**.
 
 ---
 
 ### 🔐 Regras de Acesso
+
 Para o acesso ser **CONCEDIDO**, o usuário precisa atender a **UMA** das duas condições abaixo:
 
-- **Condição A**  
-  - Ter a **senha secreta** (defina uma senha numérica, por exemplo: `1234`)  
+- **Condição A**
+  - Ter a **senha secreta** (defina uma senha numérica, por exemplo: `1234`)
   - **E** ter **mais de 18 anos**
 
-- **Condição B**  
-  - Ser um **Usuário VIP**  
-    - O usuário deve digitar `1` para **Sim** ou `0` para **Não**  
+- **Condição B**
+  - Ser um **Usuário VIP**
+    - O usuário deve digitar `1` para **Sim** ou `0` para **Não**
   - VIPs têm acesso garantido **independente da idade**, **desde que acertem a senha**
 
 ---
 
 ### 🧠 O que seu programa deve fazer
+
 - Pedir ao usuário para digitar a **Senha** (`int`)
 - Pedir ao usuário para digitar a **Idade** (`int`)
 - Pedir ao usuário para informar se é **VIP** (`1` para Sim, `0` para Não)
 - Usar a estrutura `if` com **operadores lógicos** (`&&` e `||`) para avaliar as regras
 - Exibir na tela:
-  - **"ACESSO CONCEDIDO"**  
+  - **"ACESSO CONCEDIDO"**
   - ou **"ACESSO NEGADO"**
 
 ---
 
 ### 💡 Dica de Especialista
-> *"Tente resolver este exercício usando apenas **UM ÚNICO `if`** bem estruturado com parênteses e operadores lógicos.  
-> Isso vai treinar sua capacidade de criar condições complexas e limpas!"*
+
+> _"Tente resolver este exercício usando apenas **UM ÚNICO `if`** bem estruturado com parênteses e operadores lógicos.  
+> Isso vai treinar sua capacidade de criar condições complexas e limpas!"_
+
+### Capítulo 2.5: A Força da Repetição (Loops: while e for)
+
+Imagine que você precisa imprimir "C++ é a base de tudo" 500 vezes!
+
+Você poderia escrever 500 linhas de `std::cout`, mas um bom programador é, por definição, alguém que busca a **eficiência** (e evita a fadiga)!
+
+No C++, temos **três ferramentas principais** para repetir tarefas:
+
+#### 1️⃣ O Laço `while` (Enquanto...)
+
+O `while` é o mais simples. Ele diz ao computador: **"Enquanto esta condição for verdadeira, continue repetindo este bloco de código"**!
+
+```cpp
+int contador = 1;
+
+while (contador <= 5) {
+    std::cout << "Repeticao numero: " << contador << std::endl;
+    contador++; // Importante: se voce esquecer isso, o loop sera infinito! 😉
+}
+```
+
+**Uso ideal:** Quando você não sabe exatamente quantas vezes a repetição vai acontecer (ex: esperar o usuário digitar a senha correta).
+
+---
+
+#### 2️⃣ O Laço `for` (Para...)
+
+O `for` é o **"canivete suíço"** das repetições. Ele agrupa a criação da variável, a condição e o incremento em uma única linha. É muito mais limpo e difícil de causar erros de "loop infinito"!
+
+```cpp
+// Sintaxe: for (inicio; condicao; incremento)
+
+for (int i = 1; i <= 5; i++) {
+    std::cout << "Contagem: " << i << std::endl;
+}
+```
+
+**Uso ideal:** Quando você sabe exatamente quantas vezes quer repetir (ex: de 1 a 10, ou o tamanho de uma lista).
+
+---
+
+#### 3️⃣ O Laço `do-while` (Faça... enquanto!)
+
+Diferente do `while` comum, o `do-while` executa o código **pelo menos uma vez** antes de testar a condição.
+
+```cpp
+int opcao;
+
+do {
+    std::cout << "Menu: 1-Jogar | 0-Sair: ";
+    std::cin >> opcao;
+} while (opcao != 0);
+```
+
+**Uso ideal:** Menus de sistemas, onde você precisa mostrar as opções ao menos uma vez para o usuário escolher.
+
+---
+
+### 🚀 Desafio Prático: Loops e Lógica
+
+O conteúdo ficou denso? Para facilitar, preparei um **exercício de fixação 'casca grossa'** sobre Loops e Lógica lá no meu GitHub.
+
+O desafio é criar um **Analisador de Estatísticas Numéricas**. É o tipo de lógica que separa quem entende o código de quem apenas copia.
+
+#### 📂 Como Participar
+
+1. Acesse o repositório: [ExerciciosLikedin/exercicio_loops](ExerciciosLikedin/exercicio_loops/)
+2. Faça um **Fork** do projeto
+3. Resolva o desafio no arquivo `exercicio_loops.cpp`
+4. Me marque aqui ou mande um **Pull Request**! Vou adorar revisar o código de vocês!
+
+---
+
+### 🧠 Reflexão do Capítulo 2.5
+
+Agora seu programa pode processar **milhares de informações em milissegundos**. Mas note algo importante: todas as variáveis que usamos até agora guardam apenas **um valor por vez**.
+
+**E se precisarmos guardar:**
+
+- Uma lista de 100 nomes?
+- 1000 temperaturas ao mesmo tempo?
+
+Para isso, precisamos de **estruturas que agrupam dados**. Esse é o tema do nosso próximo capítulo: **Capítulo 2.6 – Arrays e Vetores (Coleções de Dados)**.
 
 ---
 
