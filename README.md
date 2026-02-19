@@ -14,8 +14,19 @@ Um curso completo e prático de C++ moderno, focado em fundamentos sólidos e co
 - [Pré-requisitos](#pré-requisitos)
 - [Como Usar](#como-usar)
 - [Capítulos](#capítulos)
-  - [Capítulo 1: A Anatomia do C++](#capítulo-1-a-anatomia-do-c)
-  - [Capítulo 2: O Fluxo da Lógica](#capítulo-2-o-fluxo-da-lógica)
+  - [Capítulo 1: A Anatomia do C++](#capítulo-1-a-anatomia-do-c-e-o-primeiro-contato)
+    - [1.1 O que é o C++ de Verdade?](#11-o-que-é-o-c-de-verdade)
+    - [1.2 O Ciclo de Vida do Código](#12-o-ciclo-de-vida-do-código)
+    - [1.3 O Primeiro Programa Analisado](#13-o-primeiro-programa-analisado)
+  - [Capítulo 2: O Fluxo da Lógica](#capítulo-2-o-fluxo-da-lógica-variáveis-e-controle)
+    - [2.1 Guardando Informações (Variáveis)](#21-guardando-informações-variáveis)
+    - [2.2 Como Criar Uma Variável](#22-como-criar-uma-variável)
+    - [2.3 Fazendo Contas Simples](#23-fazendo-contas-simples)
+    - [2.4 Interagindo com o Usuário (std::cin)](#24-interagindo-com-o-usuário-stdcin)
+    - [2.5 Exercício de Fixação – "Seu Primeiro Cadastro Simples"](#25-exercício-de-fixação--seu-primeiro-cadastro-simples)
+    - [2.6 Desafio Super Simples – "O seu primeiro App"](#26-desafio-super-simples--o-seu-primeiro-app)
+    - [2.7 O Poder da Decisão (if, else e a Lógica Booleana)](#27-o-poder-da-decisão-if-else-e-a-lógica-booleana)
+    - [2.8 A Força da Repetição (Loops: while e for)](#capítulo-25-a-força-da-repetição-loops-while-e-for)
 - [Tecnologias](#tecnologias)
 - [Contribuindo](#contribuindo)
 - [Licença](#licença)
@@ -481,7 +492,7 @@ Para o acesso ser **CONCEDIDO**, o usuário precisa atender a **UMA** das duas c
 > _"Tente resolver este exercício usando apenas **UM ÚNICO `if`** bem estruturado com parênteses e operadores lógicos.  
 > Isso vai treinar sua capacidade de criar condições complexas e limpas!"_
 
-### Capítulo 2.5: A Força da Repetição (Loops: while e for)
+#### 2.8 A Força da Repetição (Loops: while e for)
 
 Imagine que você precisa imprimir "C++ é a base de tudo" 500 vezes!
 
